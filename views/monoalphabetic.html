@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<title>MONOALPHABETIC CIPHER</title>
+
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+	<body>
+
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href='../index.html'>HOME <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href='../home.html'>OPTIONS</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- CIPHER NAME -->
+		<div class="title">
+			<h1 class="outsideScreen"><span>MONOALPHABETIC CIPHER</span></h1>
+		</div>
+		<button class="information" id="information">INFORMATION</button><br><br><br>
+		<button class="instructions" id="instructions">INSTRUCTIONS</button>
+		<button class="key" id="key">KEY</button>
+
+
+
+		<div id="myinformation" class="information_content">
+
+			<!-- content -->
+			<div class="information-content">
+				<div><span class="close1">&times;</span></div>
+				<div class="information-body">
+					<p>
+						1.A mono-alphabetic cipher is a substitution cipher where each letter of the plain text is replaced with another letter of the alphabet.
+						<br><br>2. It uses a fixed key which consist of the 26 letters of a “shuffled alphabet”.
+						<br><br>3. The key can be generated any time with the alphabets a – z
+
+					</p>
+
+				</div>
+			</div>
+		</div>
+		<div id="mykey" class="key_content">
+
+			<!-- content -->
+			<div class="key-content">
+				<div><span class="close3">&times;</span></div>
+				<div class="key-body">
+					<p>
+						<textarea rows="4" cols="50" id="Key" placeholder="Key"></textarea>
+					</p>
+
+				</div>
+			</div>
+
+		</div>
+		<div id="myinstructions" class="instructions_content">
+
+			<!-- content -->
+			<div class="instructions-content">
+				<div class="instructions-header">
+					<span class="close2">&times;</span>
+				</div>
+				<div class="instructions-body">
+					<p>
+						<br>1. Enter the text to encrypt
+						<br><br>2. Click on cipher button to encrypt the text.
+						<br><br>3. Follow the same instructions to decrypt.
+					</p>
+
+				</div>
+			</div>
+
+		</div>
+		<script>
+
+			var information = document.getElementById("myinformation");
+			var key = document.getElementById("mykey");
+			var instructions = document.getElementById("myinstructions");
+
+
+			var informtion_button = document.getElementById("information");
+			var key_button = document.getElementById("key")
+			var instructions_button = document.getElementById("instructions");
+
+
+
+			var span = document.getElementsByClassName("close1")[0];
+			var span1 = document.getElementsByClassName("close2")[0];
+			var span2 = document.getElementsByClassName("close3")[0];
+
+
+
+			informtion_button.onclick = function () {
+				if (information.style.display === "block") {
+					information.style.display = "none";
+				}
+				else {
+					information.style.display = "block";
+				}
+			}
+			key_button.onclick = function () {
+				if (key.style.display === "block") {
+					key.style.display = "none";
+				}
+				else {
+					key.style.display = "block";
+				}
+			}
+
+			instructions_button.onclick = function () {
+				if (instructions.style.display === "block") {
+					instructions.style.display = "none";
+				}
+				else {
+					instructions.style.display = "block";
+				}
+
+			}
+
+			span.onclick = function () {
+				information.style.display = "none";
+			}
+			span1.onclick = function () {
+				instructions.style.display = "none";
+			}
+			span2.onclick = function () {
+				key.style.display = "none";
+			}
+
+			window.onclick = function (event) {
+				if (event.target == information) {
+					information.style.display = "none";
+				}
+			}
+			window.onclick = function (event) {
+				if (event.target == information) {
+					key.style.display = "none";
+				}
+			}
+			window.onclick = function (event) {
+				if (event.target == instructions) {
+					instructions.style.display = "none";
+				}
+			}
+		</script>
+
+
+		<div class="inOut">
+
+			<textarea rows="3" cols="50" id="textbox" placeholder="Input"></textarea>
+			<span>
+				<br> <br><br>
+				<button class="polyButton cipherMethod" id="btn">Cipher</button>
+				<button class="polyButton decipherMethod" id="debtn">Decipher</button>
+				<br><br><br>   <br><br><br>   <br><br><br> <br>
+				<div class="inOut">
+
+
+				</div>
+			</span>
+
+			<textarea class="textright" rows="4" cols="50" id="result" placeholder="Output"></textarea>
+
+		</div>
+		</span>
+
+
+		</center>
+
+		<script>
+			var shuffledArr;
+			let alphabetArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+			function shuffle(array) {
+				let shuffledArray = array.slice(0, array.length)
+				var currentIndex = shuffledArray.length;
+				var temporaryValue, randomIndex;
+
+				while (0 !== currentIndex) {
+					randomIndex = Math.floor(Math.random() * currentIndex);
+					currentIndex -= 1;
+
+					temporaryValue = shuffledArray[currentIndex];
+					shuffledArray[currentIndex] = shuffledArray[randomIndex];
+					shuffledArray[randomIndex] = temporaryValue;
+				}
+
+				return shuffledArray;
+			}
+
+			function cipher() {
+				shuffledArr = shuffle(alphabetArr);
+				document.getElementById("Key").innerHTML = shuffledArr.join().replace(/,/g, '')
+
+				var textArr = document.getElementById("textbox").value.split("");
+				for (let k = 0; k < textArr.length; k++) {
+					if ((textArr[k] == ' ') || (textArr[k] == '\t') || (textArr[k] == '\n' || alphabetArr.indexOf(textArr[k].toUpperCase()) == -1)) {
+						continue;
+
+					} else
+						textArr[k] = shuffledArr[alphabetArr.indexOf(textArr[k].toUpperCase())];
+				}
+				document.getElementById("result").innerHTML = textArr.join().replace(/,/g, '')
+			}
+
+
+			function decipher() {
+				var textArr = document.getElementById("result").value.split("");
+				for (let k = 0; k < textArr.length; k++) {
+					if ((textArr[k] == ' ') || (textArr[k] == '\t') || (textArr[k] == '\n' || alphabetArr.indexOf(textArr[k].toUpperCase()) == -1)) {
+						continue;
+
+					} else
+						textArr[k] = alphabetArr[shuffledArr.indexOf(textArr[k].toUpperCase())];
+				} document.getElementById("result").innerHTML = textArr.join().replace(/,/g, '')
+			}
+
+
+			document.getElementById("btn").onclick = function () {
+				cipher();
+			}
+
+			document.getElementById("debtn").onclick = function () {
+				decipher();
+			}
+
+		</script>
+	</body>
+</html>
+

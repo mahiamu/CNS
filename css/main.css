@@ -1,0 +1,547 @@
+
+/* style for the body of the document */
+
+.btn-group {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+body {
+    text-decoration-color: white ;
+    margin: 0px 0px;
+    background-image: url('../src/bg3.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: fantasy;
+   overflow-x: hidden;
+}
+button.block{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #04AA6D;
+    padding: 14px 28px;
+    font-size: 23px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+      position: relative;
+       background: rgb(15, 215, 253);
+}
+
+
+/* style for all buttons in the project */
+button {
+
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+    position: relative;
+    display: block;
+    background: rgb(15, 215, 250);
+    color: rgb(8, 8, 8);
+    height: 45px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    display: inline-block;
+    border: 3px solid rgb(8, 8, 8);
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px 1px rgb(2, 92, 99) inset;
+}
+
+/* increased size for the description of rotor setting */
+.rotorSet {
+    font-size: 20px;
+}
+
+/* style for title of each cipher page */
+.title {
+    text-align: center;
+    margin-bottom: 75px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.2);
+    margin-top: 0px;
+    color: white;
+}
+ul{
+    color: white;
+}
+
+    .title h1 span {
+        background-color: rgba(8, 1, 51, 0.753);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+/*information button*/
+
+#information {
+    position: fixed;
+    float: left;
+    bottom: 5%;
+    width: 300px;
+    box-shadow: none;
+    border: none;
+    height: 45px;
+    text-align: center;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    font-size: 18px;
+    background-color: rgb(7, 2, 56);
+    color: blanchedalmond;
+    border: 2px solid white;
+    border-left: 4px solid black;
+    border-right: 30px double rgb(209, 206, 206);
+}
+#key {
+    position: fixed;
+    float: none;
+    right: 40%;
+    bottom: 5%;
+    width: 300px;
+    box-shadow: none;
+    border: none;
+    height: 45px;
+    text-align: center;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    font-size: 18px;
+    background-color: rgb(7, 2, 56);
+    color: blanchedalmond;
+    border: 2px solid white;
+    border-left: 4px solid black;
+    border-right: 30px double rgb(209, 206, 206);
+    border-left: 30px double rgb(209, 206, 206);
+}
+
+#instructions {
+    position: fixed;
+    right: 0%;
+    bottom: 5%;
+    width: 300px;
+    box-shadow: none;
+    border: none;
+    border-radius: none;
+    height: 45px;
+    text-align: center;
+    background-color: rgb(7, 2, 56);
+    color: blanchedalmond;
+    border: 2px solid white;
+    border-right: 4px solid black;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-left: 30px double rgb(184, 182, 182);
+    font-size: 18px;
+}
+
+
+ 
+
+@media (max-width: 850px) {
+    #information {
+        width: 100px;
+        font-size: 9px;
+        border-right: 10px double rgb(209, 206, 206);
+    }
+    
+
+    #instructions {
+        width: 100px;
+        left: 0%;
+        bottom: 15%;
+        font-size: 9px;
+        border: 2px solid white;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-left: 4px solid black;
+        border-right: 10px double rgb(209, 206, 206);
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+    }
+
+  
+}
+
+#myinformation {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* Location of the box */
+    left: 0;
+
+    /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation-name: example;
+    animation-duration: 1s;
+    color: black;
+    animation-fill-mode: both;
+    text-align: left;
+}
+#mykey {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* Location of the box */
+    left: 36%;
+    top: 0;
+    /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation-name: example1;
+    animation-duration:1s;
+    color: black;
+    animation-fill-mode: both;
+    text-align:center;
+}
+
+#myinstructions {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* Location of the box */
+    right: 0;
+    top: 0;
+    /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(255, 255, 255, 0.2); /* Black w/ opacity */
+    animation-name: example1;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    text-align: left;
+    color: black;
+}
+
+@keyframes example {
+    from {
+        top: 0px;
+        background-color: rgb(30, 1, 97);
+        width: 0%;
+        border-top-right-radius: 15px;
+        border: 3px solid black;
+    }
+
+    to {
+        top: 220px;
+        background-color: rgb(144, 226, 247);
+        width: 370px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: 3px solid black;
+    }
+}
+
+@keyframes example1 {
+    from {
+        top: 0px;
+        background-color: rgb(30, 1, 97);
+        width: 0%;
+        border-top-left-radius: 15px;
+        border: 3px solid black;
+    }
+
+    to {
+        top: 220px;
+        background-color: rgb(152, 232, 252);
+        width: 370px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border: 3px solid black;
+    }
+}
+
+.information-content {
+    top: 0%;
+}
+
+div#myinstructions.instructions_content {
+    padding: 10px 10px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+div#myinformation.information_content {
+    padding: 10px 10px 10px;
+    width: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+/* used for animating titles in cipher pages */
+.outsideScreen {
+    transform: translateX(-80%);
+}
+
+
+/* centers controls in their container and adds margin at the top */
+.inOut {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* style for all textareas used in the project */
+textarea {
+    color: white;
+    background-color: rgba(247, 247, 248, 0.959);
+    padding: 10px;
+    border-radius: 5px;
+    border: 4px outset rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    border-radius: 15px;
+    width: 30%;
+    outline: none;
+    background-color: rgb(1, 37, 78);
+    height: 300px;
+    box-shadow: 20px 20px 50px 10px rgb(8, 8, 8) inset;
+    display: inline-block;
+}
+
+@media (max-width: 850px) {
+    textarea {
+        width: 100%;
+    }
+
+    .inOut {
+        display: inline-table;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 851px) {
+    .textleft {
+        margin-right: 100px;
+    }
+
+    .textright {
+        margin-left: 100px;
+    }
+}
+
+/* style for all inputs used in the project */
+input {
+    color: rgb(10, 10, 10);
+    background-color: white;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    border: 2px solid rgba(7, 7, 7, 0.979);
+    width: 300px;
+    padding: 5px;
+}
+
+/* style for modals */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    transform: translateY(-11%);
+}
+/* The Modal Example for design document */
+.modalExample {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    transform: translateY(-11%);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    top: 0;
+}
+
+.close1 {
+    float: right;
+    font-size: 30px;
+    right: 0;
+    position: absolute;
+    top: 0;
+    padding: 3px;
+}
+
+.close2 {
+    float: left;
+    font-size: 30px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    padding: 3px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/*NEW*/
+* {
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.flex-item-left {
+    background-color: #04040a;
+    padding: 10px;
+    flex: 50%;
+    margin-right: 150px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 254, 254);
+    padding-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 1.5px solid white;
+    border-left: 1.5px solid black;
+}
+
+    .flex-item-left p {
+        text-align: center;
+        position: relative;
+        word-wrap: break-word;
+    }
+
+.text-align {
+    /* vertical centering technique */
+    position: relative;
+    border-radius: 50%;
+    float: left;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+
+.flex-item-right {
+    background-color: #04040a;
+    padding: 15px;
+    flex: 50%;
+    margin-left: 150px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(248, 248, 248);
+    padding-left: 70px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border: 1.5px solid white;
+    border-right: 1.5px solid black;
+}
+
+    .flex-item-right p {
+        text-align: center;
+        position: relative;
+        word-wrap: break-word;
+    }
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 850px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-item-left {
+        margin-right: 0px;
+        font-size: medium;
+    }
+
+    .flex-item-right {
+        margin-left: 0px;
+        font-size: medium;
+    }
+}
+
+.mybutton {
+    top: 20%;
+    height: 90px;
+    width: 300px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(32, 2, 80);
+    box-shadow: 0px 0px rgba(0, 0,0, 0);
+    font-size: large;
+    padding: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10000px/9000px;
+    border-color: white;
+    color: turquoise;
+    cursor: pointer;
+}
+
+    .mybutton:hover {
+        top: 20%;
+        box-shadow: 0px 0px rgba(0, 0,0, 0);
+        background-color: rgba(3, 3, 100, 0.664);
+        color: rgb(255, 255, 255);
+    }
+    /* acrive effect for button */
+    .mybutton:active {
+        top: 20%;
+    }
+
+/*HOME.HTML CSS*/
+
+    .ciphers_button {
+        width: 250px;
+        font-size: 15px;
+    }
+
